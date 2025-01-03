@@ -2,12 +2,34 @@ mod nft;
 mod token;
 
 use anyhow::{Context, Result};
-use token::{NativeBalanceRequest, TokenPricesRequest};
-use nft::{NftContractMetadataRequest, NftContractsByAccountRequest};
 use reqwest::Client;
 use serde::{Deserialize, Serialize};
 use std::time::Duration;
 
+
+use token::{ 
+    NativeBalanceRequest, 
+    TokenPricesRequest, 
+    TokenHoldersResponse,
+    TokenTransfersRequest, 
+    TokenAllowanceRequest, 
+    TokenMetadataRequest, 
+    TokenHoldersRequest, 
+    TokenTransfersResponse,
+    TokenAllowanceResponse,
+    TokenMetadataResponse,
+    TokenHolder,
+    TokenTransfer
+};
+use nft::{ 
+    NftContractMetadataRequest, 
+    NftContractsByAccountRequest, 
+    NftMetadataByTokenIdsRequest,
+    NftContractMetadataResponse,
+    TokenIdentifier,
+    NftTransfersByAccountRequest,
+    TokenTransfersResponse
+};
 
 const BASE_URL: &str = "https://web3.nodit.io";
 

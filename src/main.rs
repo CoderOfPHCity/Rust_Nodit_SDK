@@ -11,7 +11,7 @@ async fn main() -> anyhow::Result<()> {
 
     // Example wallet address and contract address
     let wallet_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-    let contract_address = "0xdac17f958d2ee523a2206206994597c13d831ec7"; // USDT contract
+    let contract_address = "0xdac17f958d2ee523a2206206994597c13d831ec7"; 
 
     // Test 1: Get native balance
     println!("Getting native balance...");
