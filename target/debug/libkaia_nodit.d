@@ -1,0 +1,1 @@
+/home/agantem/Desktop/Work/kaia_nodit/target/debug/libkaia_nodit.rlib: /home/agantem/Desktop/Work/kaia_nodit/src/lib.rs /home/agantem/Desktop/Work/kaia_nodit/src/nft.rs /home/agantem/Desktop/Work/kaia_nodit/src/token.rs

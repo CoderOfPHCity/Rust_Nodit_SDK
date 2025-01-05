@@ -1,17 +1,17 @@
-use nodit_sdk::{NoditClient, TokenTransfersRequest, TokenHoldersRequest};
+use kaia_nodit::{NoditClient, TokenHoldersRequest, TokenTransfersRequest};
+
 use std::env;
 use tokio;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
- 
     let api_key = env::var("NODIT_API_KEY").expect("NODIT_API_KEY must be set");
 
     let client = NoditClient::new(api_key)?;
 
     // Example wallet address and contract address
     let wallet_address = "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-    let contract_address = "0xdac17f958d2ee523a2206206994597c13d831ec7"; 
+    let contract_address = "0xdac17f958d2ee523a2206206994597c13d831ec7";
 
     // Test 1: Get native balance
     println!("Getting native balance...");
@@ -40,7 +40,9 @@ async fn main() -> anyhow::Result<()> {
         cursor: None,
         with_count: Some(true),
     };
-    let transfers = client.get_token_transfers_by_account(transfers_request).await?;
+    let transfers = client
+        .get_token_transfers_by_account(transfers_request)
+        .await?;
     println!("Token Transfers: {:?}", transfers);
 
     // Test 4: Get token metadata
@@ -59,7 +61,9 @@ async fn main() -> anyhow::Result<()> {
         cursor: None,
         with_count: Some(true),
     };
-    let holders = client.get_token_holders_by_contract(holders_request).await?;
+    let holders = client
+        .get_token_holders_by_contract(holders_request)
+        .await?;
     println!("Token Holders: {:?}", holders);
 
     Ok(())

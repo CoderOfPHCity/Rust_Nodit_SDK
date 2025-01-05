@@ -134,5 +134,3 @@ pub struct Paging {
     pub total_pages: i32,
     pub total_items: i32,
 }
-
-
