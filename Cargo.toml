@@ -1,5 +1,6 @@
 [package]
 name = "kaia_nodit"
+path = "src/kaia_nodit.rs"
 version = "0.1.0"
 edition = "2021"
 
